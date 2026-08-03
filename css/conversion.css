@@ -103,6 +103,7 @@ footer{padding-top:52px}
 .map-frame{box-shadow:0 20px 55px rgba(0,59,112,.16);outline:8px solid rgba(255,255,255,.7);outline-offset:-8px}
 .form{box-shadow:0 24px 65px rgba(0,24,48,.24)}
 .statement{background:linear-gradient(125deg,#003b70 0 65%,#005394 65%)}
+.statement .btn-white:hover{background:#dff1fc;color:#003b70;border-color:#dff1fc;box-shadow:0 10px 28px rgba(0,20,45,.24);transform:translateY(-2px)}
 .statement:before{content:'';position:absolute;z-index:0;left:0;bottom:0;width:48%;height:7px;background:linear-gradient(90deg,#65b9ea,#fff);opacity:.7}
 .wa-icon img{width:20px;height:20px;object-fit:contain}
 .instagram-link{display:inline-flex;align-items:center;gap:9px;margin-top:20px;color:#005bac;font-size:13px;font-weight:750}.instagram-link img{width:20px;height:20px}.instagram-link span{transition:transform .2s}.instagram-link:hover span{transform:translateX(4px)}
