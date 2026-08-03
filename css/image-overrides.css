@@ -1,0 +1,14 @@
+/* Enquadramentos específicos das fotografias locais em diferentes proporções. */
+.hero-visual img{object-position:54% center}
+.photo-stack img{object-position:56% center}
+.course-math{object-position:48% 60%}
+.course-portuguese{object-position:58% 48%}
+.course-english{object-position:50% 44%}
+.profile-image{object-position:57% center}
+.map-frame{display:block;width:100%;min-height:480px;border:0;border-radius:24px;background:#eaf4fb}
+
+@media(max-width:768px){
+  .hero-visual img{object-position:52% center}
+  .photo-stack img{object-position:55% center}
+  .profile-image{object-position:55% center}
+}
