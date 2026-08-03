@@ -10,6 +10,15 @@ topBtn.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
 
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const heroCarousel=$('.hero-carousel'), heroSlides=$$('.hero-slide'), heroDots=$('.hero-carousel-dots');
+let heroIndex=0,heroTimer;
+if(heroCarousel&&heroSlides.length){
+  heroSlides.forEach((slide,i)=>{const button=document.createElement('button');button.type='button';button.setAttribute('aria-label',`Mostrar imagem ${i+1} da unidade`);button.addEventListener('click',()=>showHeroSlide(i,true));heroDots.appendChild(button);slide.setAttribute('aria-hidden',i?'true':'false')});
+  function showHeroSlide(next,user=false){heroIndex=(next+heroSlides.length)%heroSlides.length;heroSlides.forEach((slide,i)=>{const active=i===heroIndex;slide.classList.toggle('active',active);slide.setAttribute('aria-hidden',active?'false':'true')});$$('button',heroDots).forEach((dot,i)=>dot.classList.toggle('active',i===heroIndex));if(user&&!reduced){clearInterval(heroTimer);heroTimer=setInterval(()=>showHeroSlide(heroIndex+1),4800)}}
+  showHeroSlide(0);
+  if(!reduced)heroTimer=setInterval(()=>showHeroSlide(heroIndex+1),4800);
+}
 const flowSections=$$('main > section:not(.hero)');
 flowSections.forEach(section=>section.classList.add('section-flow'));
 if(!reduced){
