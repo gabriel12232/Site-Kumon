@@ -33,6 +33,9 @@ $$('.reveal').forEach(el=>reduced?el.classList.add('visible'):revealObserver.obs
 const sections=$$('main section[id]'), navLinks=$$('.menu a[href^="#"]');
 const sectionObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-35% 0px -55%'});sections.forEach(s=>sectionObserver.observe(s));
 
+const methodSection=$('#metodo'),methodToggle=$('.method-toggle'),methodExtra=$('#method-extra');
+if(methodToggle&&methodExtra){methodToggle.addEventListener('click',()=>{const open=methodToggle.getAttribute('aria-expanded')!=='true';methodToggle.setAttribute('aria-expanded',String(open));methodExtra.setAttribute('aria-hidden',String(!open));methodSection.classList.toggle('method-expanded',open);$('b',methodToggle).childNodes[0].nodeValue=open?'Ocultar informações ':'Ver como funciona '})}
+
 const track=$('.testimonial-track'), slides=$$('.testimonial'), dots=$('.dots');let index=0,timer,interacted=false,touchX=0;
 slides.forEach((_,i)=>{const b=document.createElement('button');b.className='dot';b.setAttribute('aria-label',`Ir ao depoimento ${i+1}`);b.addEventListener('click',()=>go(i,true));dots.appendChild(b)});
 function go(i,user=false){index=(i+slides.length)%slides.length;track.style.transform=`translateX(-${index*100}%)`;$$('.dot').forEach((d,n)=>d.classList.toggle('active',n===index));if(user){interacted=true;clearInterval(timer)}}
