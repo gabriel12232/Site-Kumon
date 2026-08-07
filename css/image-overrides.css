@@ -9,7 +9,7 @@
 .photo-stack img{object-position:56% center}
 .course-math{object-position:48% 60%}
 .course-portuguese{object-position:58% 48%}
-.course-english{object-position:50% top}
+.course-english{object-position:50% 44%}
 .profile-image{object-position:57% center}
 .map-frame{display:block;width:100%;min-height:480px;border:0;border-radius:24px;background:#eaf4fb}
 .unit-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}
