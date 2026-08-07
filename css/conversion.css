@@ -179,6 +179,13 @@ footer{background:#071b24}
 
 @media(max-width:768px){#unidade{background:linear-gradient(180deg,#fff 0 78%,rgba(125,205,244,.2) 78%)}}
 
+/* A seção do método usa somente a fotografia principal em todos os estados. */
+.method-visual{padding-right:0;padding-bottom:0;min-height:475px}
+.method-small{display:none}
+.method-caption{bottom:18px}
+@media(max-width:1024px){.method-visual{min-height:410px}}
+@media(max-width:768px){.method-visual{min-height:300px}}
+
 @media(min-width:481px) and (max-width:768px){
   :root{--wrap:min(100% - 40px,680px)}
   .hero-visual img{height:390px}.hero .trust{display:grid;grid-template-columns:repeat(3,1fr)}
