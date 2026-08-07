@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://site-kumon.vercel.app/sitemap.xml
+Sitemap: https://www.kumonguarulhosvilaflorida.com.br/sitemap.xml
